@@ -16,6 +16,7 @@ html, body{
 
 /* ********************** Main *********************/
 .main{
+    position: relative;
     padding: 3rem;
     width: 100%;
     height: auto;
@@ -50,25 +51,25 @@ header h2{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.3);
 }
-
 .toc-author{
+    font-size: 1.4rem;
     position: absolute;
     color: white;
     top: 55px;
     right: 85px;
-    z-index: 4;
+    z-index: 2;
     text-shadow: 4px 4px 8px rgba(255, 255, 255, 0.235);
 }
-.toc-auth-dot{
+.toc-auth-square{
     position: absolute;
-    top: 43px;
-    left: 1028px;
+    top: 42px;
+    right: 168px;
     width: 50px;
     height: 50px;
     background: linear-gradient(to right, #feb415, #fd5e01);
     border-radius: 15px;
     animation: rotate 8s linear infinite;
-    z-index: 2;
+    z-index: 1;
 }
 @keyframes rotate {
     0%{
@@ -78,26 +79,21 @@ header h2{
         transform: rotate(360deg);
     }
 }
-.table-of-content ol{
-    height: 380px;
-    overflow-y: auto;
-    background-color: #dfdfdf;
-}
 
 .table-of-content li{
     position: relative;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-left: 30px;
     cursor: pointer;
-    padding: 7px 15px;
+    padding: 5px 15px;
     color: #515151;;
 }
 .table-of-content li a{
+    position: absolute;
     text-decoration: none;
-    transition: transform 0.1s ease-in-out;
+    transition: transform 0.2s ease-out;
 }
 .table-of-content li a:hover{
-    position: absolute;
     transform: translateY(-5px);
 }
 .table-of-content li:hover{
@@ -109,7 +105,11 @@ header h2{
 /* ******************************** Assets ********************************************* */
 
 .assets{
-    margin-top: 90px;
+    margin-top: 10px;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
 }
 .asset-wrapper{
     width: 100%;
@@ -117,9 +117,67 @@ header h2{
     padding: 0 50px;
 }
 .a1{
+    display: grid;
+    position: relative;
+    place-items: center;
     margin-top: 15px;
     width: 100%;
     height: 344px;
-    background-color: #dfdfdf;
-    box-shadow: inset 6px 6px 14px rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    box-shadow: 6px 6px 14px rgba(255, 255, 255, 0.5);
+}
+.a1 button{
+    outline: none;
+    border: none;
+    padding: 15px 35px;
+    background-color: #3e3e3e;
+    font-size: 1.9rem;
+    box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.5);
+    filter: blur(1px);
+    transition: transform 0.2s ease-out;
+}
+.a1 button:hover{
+    filter: blur(0px);
+    transform: translateY(-10px);
+    transform: scale(1.2);
+}
+.a2{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding: 5rem;
+}
+.a2 input{
+    width: 441px;
+    height: 50px;
+    color: black;
+    padding: 10px 20px 5px 15px;
+    font-size: 1.3rem;
+    outline: none;
+    border: none;
+    box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.5);
+    filter: blur(1px);
+    transition: transform 0.2s ease-out;
+}
+.a2 input:hover{
+    transform: scale(1.2);
+    filter: blur(0px);
+}
+.a2 input:focus{
+    transform: scale(1.2);
+    filter: blur(0px);
+}
+.a3{
+    background-image: url('');
+    background-size: cover; /* Cover the entire div */
+    background-position: center; /* Center the image */
+}
+.a3 button{
+    background: linear-gradient(to top, #3e95fc, #60a9ff);
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease-out, background 0.2s ease-in-out;
+}
+.a3 button:hover{
+    background: linear-gradient(to top, #127dff, #4ea0ff);
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
 }
