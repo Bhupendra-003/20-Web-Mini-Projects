@@ -23,6 +23,7 @@ html, body{
     background-color: rgb(26, 26, 26);
     min-height: 100vh;
     z-index: 0;
+    transition: background 0.3s linear;
 }
 header{
     display: flex;
@@ -62,12 +63,12 @@ header h2{
 }
 .toc-auth-square{
     position: absolute;
-    top: 42px;
+    top: 25px;
     right: 168px;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     background: linear-gradient(to right, #feb415, #fd5e01);
-    border-radius: 15px;
+    border-radius: 30px;
     animation: rotate 8s linear infinite;
     z-index: 1;
 }
@@ -135,6 +136,7 @@ header h2{
     box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.5);
     filter: blur(1px);
     transition: transform 0.2s ease-out;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
 }
 .a1 button:hover{
     filter: blur(0px);
@@ -180,4 +182,32 @@ header h2{
 .a3 button:hover{
     background: linear-gradient(to top, #127dff, #4ea0ff);
     text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+.a4 button{
+    background: linear-gradient(to top, #ff8800, #ff611d);
+}
+.a5 button{
+    background: linear-gradient(135deg, #da22ff, #9733ee);
+    box-shadow: 3px 3px 14px rgba(128, 1, 255, 0.4);
+}
+
+.a6{
+    display: flex;
+    padding: 50px;
+    flex-direction: row;
+}
+.a6 button{
+    margin-top: 45px;
+}
+.a6 img{
+    width: 500px;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 9px 9px 12px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(135deg, #575757, #424242);
+    transition: transform 0.2s ease-out, filter 0.5s ease-out;
+
+}
+.a6 img:hover{
+    transform: scale(0.9);
 }
